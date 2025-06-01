@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>和太鼓 響</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <header>
+    <h1>和太鼓 響 <span class="since">Since 1986</span></h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('about')">和太鼓 響</button>
+    <button onclick="showSection('events')">出演情報</button>
+    <button onclick="showSection('join')">体験・入会のご案内</button>
+    <button onclick="showSection('contact')">お問い合わせ</button>
+    <button onclick="showSection('sns')">SNS</button>
+  </nav>
+
+  <main>
+    <section id="about" class="active">
+      <h2>明るく、楽しく、意欲的に</h2>
+      <p>和太鼓 響は、愛知県稲沢市を拠点に活動する和太鼓チームです。<br>明るく元気な演奏で、演奏を見に来てくださった皆様に笑顔を届けます。</p>
+      <p class="highlight">和太鼓 響は新しい仲間を募集しています！</p>
+      <div class="image-gallery">
+        <img src="images/image1.png" alt="和太鼓 響 団体写真1" class="responsive-img">
+        <img src="images/image2.png" alt="和太鼓 響 団体写真2" class="responsive-img">
+      </div>
+    </section>
+
+    <section id="events">
+      <h2>2025年度出演情報 (X月X日更新)</h2>
+      <ul>
+        <li>8月2日(土)　17:30～18:00</li>
+        <li>8月9日(土)　18:00頃</li>
+        <li>8月23日(土)　出演時間未定</li>
+      </ul>
+      <h3>過去出演実績</h3>
+      <ul>
+        <li>稲沢桜祭り</li>
+        <li>稲沢春の芸術祭</li>
+        <li>稲沢祭り</li>
+        <li>国府宮はだか祭り</li>
+        <li>大里西ふれあい文化祭</li>
+        <li>長光寺かがり火音楽会 等</li>
+      </ul>
+      <div class="image-gallery">
+        <img src="images/image3.png" alt="過去の出演風景1" class="responsive-img">
+        <img src="images/image4.png" alt="過去の出演風景2" class="responsive-img">
+      </div>
+    </section>
+
+    <section id="join">
+      <h2>体験・入会のご案内</h2>
+      <div class="info-box">
+        <p><strong>練習日 :</strong> 毎週土曜日 13:00～16:00</p>
+        <p><strong>練習場所 :</strong> 大里西小学校体育館</p>
+        <p><small>※練習日、練習場所は都合により変更になる可能性がございます。</small></p>
+        <p><strong>会費 :</strong> 1000円/月 (2025年度)</p>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>お問い合わせ</h2>
+      <p>代表 : 川島</p>
+      <ul>
+        <li><img src="icons/phone.svg" class="icon"> TEL : 090-5455-5340</li>
+        <li><img src="icons/mail.svg" class="icon"> Email : inazawa_hibiki@yahoo.co.jp</li>
+      </ul>
+    </section>
+
+    <section id="sns">
+      <h2>SNS</h2>
+      <ul>
+        <li><img src="icons/facebook.svg" class="icon"><a href="https://www.facebook.com/wadaikohibiki1730/?locale=ja_JP" target="_blank">Facebook</a></li>
+        <li><img src="icons/instagram.svg" class="icon"><a href="#">Instagram（近日公開）</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 和太鼓 響</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('main section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>

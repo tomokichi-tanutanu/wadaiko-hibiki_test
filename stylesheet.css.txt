@@ -1,0 +1,153 @@
+/* ===== 和太鼓 響 スタイルシート ===== */
+
+/* 共通設定 */
+body {
+  margin: 0;
+  font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  background: white;
+  color: black;
+}
+
+header {
+  background-color: #b40000;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.since {
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  color: yellow;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  flex-wrap: wrap;
+}
+
+nav button {
+  background: white;
+  color: #b40000;
+  border: none;
+  padding: 1rem;
+  margin: 0.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+nav button:hover {
+  background: #b40000;
+  color: white;
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  display: none;
+}
+
+section.active {
+  display: block;
+  animation: fadeIn 0.5s;
+}
+
+h2 {
+  color: #b40000;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #e69500;
+  margin-top: 1rem;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  display: block;
+  margin: 1rem auto;
+  border: 5px solid #b40000;
+}
+
+.info-box {
+  background: #fff6f6;
+  padding: 1rem;
+  border-left: 5px solid #b40000;
+  margin-bottom: 1rem;
+}
+
+.map-container {
+  margin-top: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 0.5rem 0;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+a {
+  color: #b40000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  nav button {
+    flex: 1 1 100%;
+  }
+}
+
+/* 画像ギャラリーのレイアウト */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 各画像のレスポンシブ対応 */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  flex: 1 1 300px;
+}
+
